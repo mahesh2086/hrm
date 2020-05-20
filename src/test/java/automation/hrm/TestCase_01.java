@@ -24,8 +24,8 @@ public class TestCase_01 extends Base {
 	}
 
 	public static void login() {
-		d.findElement(By.id("txtUsername")).sendKeys("demo1");
-		d.findElement(By.id("txtPassword")).sendKeys("Demo1_hrm");
+		d.findElement(By.id("txtUsername")).sendKeys("");
+		d.findElement(By.id("txtPassword")).sendKeys("");
 		d.findElement(By.id("btnLogin")).click();
 		WebDriverWait wait = new WebDriverWait(d, 100);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='welcome']")));
