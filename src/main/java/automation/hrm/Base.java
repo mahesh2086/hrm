@@ -1,5 +1,7 @@
 package automation.hrm;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -27,6 +29,10 @@ public class Base {
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\drivers\\geckodriver.exe");
 			d = new FirefoxDriver();
+			d.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+			d.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+			
+			
 			d.manage().window().maximize();
 		}
 

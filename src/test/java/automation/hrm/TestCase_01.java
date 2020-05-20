@@ -13,10 +13,11 @@ public class TestCase_01 extends Base {
 	static private WebDriver d;
 	// test data
 	static String emp_f_name = "Tom";
-	static String emp_m_name = "sim";
+	static String emp_m_name = "";
 	static String emp_l_name = "Mike";
 	static String emp_id_new;
 
+	
 	public static void loadApp() {
 		d = getBrowser("chrome");
 		d.get("http://hrm.automationlabs.in/business/symfony/web/index.php/auth/login");
@@ -26,8 +27,8 @@ public class TestCase_01 extends Base {
 		d.findElement(By.id("txtUsername")).sendKeys("demo1");
 		d.findElement(By.id("txtPassword")).sendKeys("Demo1_hrm");
 		d.findElement(By.id("btnLogin")).click();
-//		WebDriverWait wait = new WebDriverWait(d, 100);
-//		wait.until(ExpectedConditions.visibilityOf(d.findElement(By.xpath("//a[@id='welcome']"))));
+		WebDriverWait wait = new WebDriverWait(d, 100);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='welcome']")));
 	}
 
 	public static void navigateToAddEmp() {
@@ -63,8 +64,8 @@ public class TestCase_01 extends Base {
 
 	public static void validateDataOfEmployee() {
 		WebDriverWait wait = new WebDriverWait(d, 60);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[text()='Personal Details']")));
-
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[text()='Personal Details']"))); // Locater
+		//wait.until(ExpectedConditions.visibilityOf(d.findElement(By.xpath("//h1[text()='Personal Details']")))); // WebElement 
 		String f_name = d.findElement(By.xpath("//input[@name='personal[txtEmpFirstName]']")).getAttribute("value");
 		String m_name = d.findElement(By.xpath("//input[@name='personal[txtEmpMiddleName]']")).getAttribute("value");
 		String l_name = d.findElement(By.xpath("//input[@name='personal[txtEmpLastName]']")).getAttribute("value");
@@ -73,6 +74,7 @@ public class TestCase_01 extends Base {
 		if (emp_f_name.equalsIgnoreCase(f_name)) {
 			System.out.println("PASS");
 		}
+		
 		if (emp_m_name.equalsIgnoreCase(m_name)) {
 			System.out.println("PASS");
 		}
