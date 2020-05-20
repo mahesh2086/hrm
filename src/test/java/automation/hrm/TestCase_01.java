@@ -24,7 +24,7 @@ public class TestCase_01 extends Base {
 	}
 
 	public static void login() {
-		d.findElement(By.id("txtUsername")).sendKeys("");
+		d.findElement(By.id("txtUsername")).sendKeys("");// need to adduser name
 		d.findElement(By.id("txtPassword")).sendKeys("");
 		d.findElement(By.id("btnLogin")).click();
 		WebDriverWait wait = new WebDriverWait(d, 100);
