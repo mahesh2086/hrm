@@ -34,7 +34,7 @@ public class SeleniumJUnitDemo extends Base {
 		assertEquals("OrangeHRM", d.getTitle()); // E , A
 	}
 
-	@Ignore
+	//@Ignore  
 	@Test
 	public void loadApp2() {
 		d.get("https://github.com/mahesh2086/hrm");
