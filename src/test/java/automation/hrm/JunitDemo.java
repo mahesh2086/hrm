@@ -1,6 +1,7 @@
 package automation.hrm;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
@@ -9,6 +10,8 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 public class JunitDemo {
 	/*
@@ -43,8 +46,12 @@ public class JunitDemo {
 
 	@Test
 	public void test_02() {
+		//WebDriver d; 
 		System.out.println("Test_02");
 		assertTrue(false);
+		// assertTrue(d.findElement(By.xpath("")).isDisplayed());
+		
+		
 		//boolen values true /false
 	}
 
@@ -60,6 +67,7 @@ public class JunitDemo {
 	@Test
 	public void test_04() {
 		System.out.println("Test_04");
+		assertFalse(false);
 	}
 
 }
