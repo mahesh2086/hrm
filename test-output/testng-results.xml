@@ -1,120 +1,363 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="1" ignored="0" total="3" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="25" passed="25">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="92" started-at="2020-05-22T04:33:44Z" finished-at="2020-05-22T04:33:44Z">
+  <suite name="Default suite" duration-ms="208" started-at="2020-05-23T04:41:48Z" finished-at="2020-05-23T04:41:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="92" started-at="2020-05-22T04:33:44Z" finished-at="2020-05-22T04:33:44Z">
-      <class name="automation.hrm.TestNGDemo">
-        <test-method status="PASS" signature="test_BeforeTest()[pri:0, instance:automation.hrm.TestNGDemo@61832929]" name="test_BeforeTest" is-config="true" duration-ms="20" started-at="2020-05-22T04:33:44Z" finished-at="2020-05-22T04:33:44Z">
+    <test name="Default test" duration-ms="208" started-at="2020-05-23T04:41:48Z" finished-at="2020-05-23T04:41:48Z">
+      <class name="automation.hrm.DataProviderDemo">
+        <test-method status="PASS" signature="test_dp_01(java.lang.String, java.lang.Integer)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_01" duration-ms="13" started-at="2020-05-23T04:41:48Z" data-provider="friendName" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[35]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_BeforeTest -->
-        <test-method status="PASS" signature="test_BeforeClass()[pri:0, instance:automation.hrm.TestNGDemo@61832929]" name="test_BeforeClass" is-config="true" duration-ms="1" started-at="2020-05-22T04:33:44Z" finished-at="2020-05-22T04:33:44Z">
+        </test-method> <!-- test_dp_01 -->
+        <test-method status="PASS" signature="test_dp_01(java.lang.String, java.lang.Integer)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_01" duration-ms="3" started-at="2020-05-23T04:41:48Z" data-provider="friendName" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[36]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_BeforeClass -->
-        <test-method status="PASS" signature="test_BeforeMethod()[pri:0, instance:automation.hrm.TestNGDemo@61832929]" name="test_BeforeMethod" is-config="true" duration-ms="0" started-at="2020-05-22T04:33:44Z" finished-at="2020-05-22T04:33:44Z">
+        </test-method> <!-- test_dp_01 -->
+        <test-method status="PASS" signature="test_dp_01(java.lang.String, java.lang.Integer)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_01" duration-ms="5" started-at="2020-05-23T04:41:48Z" data-provider="friendName" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[37]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_BeforeMethod -->
-        <test-method status="FAIL" signature="a()[pri:1, instance:automation.hrm.TestNGDemo@61832929]" name="a" duration-ms="10" started-at="2020-05-22T04:33:44Z" finished-at="2020-05-22T04:33:44Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Fail]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Fail
-at org.testng.Assert.fail(Assert.java:96)
-at automation.hrm.TestNGDemo.a(TestNGDemo.java:58)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- test_dp_01 -->
+        <test-method status="PASS" signature="test_dp_01(java.lang.String, java.lang.Integer)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_01" duration-ms="3" started-at="2020-05-23T04:41:48Z" data-provider="friendName" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[38]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- a -->
-        <test-method status="PASS" signature="test_AfterMethod()[pri:0, instance:automation.hrm.TestNGDemo@61832929]" name="test_AfterMethod" is-config="true" duration-ms="1" started-at="2020-05-22T04:33:44Z" finished-at="2020-05-22T04:33:44Z">
+        </test-method> <!-- test_dp_01 -->
+        <test-method status="PASS" signature="test_dp_01(java.lang.String, java.lang.Integer)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_01" duration-ms="4" started-at="2020-05-23T04:41:48Z" data-provider="friendName" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[39]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_AfterMethod -->
-        <test-method status="PASS" signature="test_BeforeMethod()[pri:0, instance:automation.hrm.TestNGDemo@61832929]" name="test_BeforeMethod" is-config="true" duration-ms="1" started-at="2020-05-22T04:33:44Z" finished-at="2020-05-22T04:33:44Z">
+        </test-method> <!-- test_dp_01 -->
+        <test-method status="PASS" signature="test_dp_01(java.lang.String, java.lang.Integer)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_01" duration-ms="3" started-at="2020-05-23T04:41:48Z" data-provider="friendName" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[40]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_BeforeMethod -->
-        <test-method status="PASS" signature="c()[pri:1, instance:automation.hrm.TestNGDemo@61832929]" name="c" duration-ms="2" started-at="2020-05-22T04:33:44Z" finished-at="2020-05-22T04:33:44Z">
+        </test-method> <!-- test_dp_01 -->
+        <test-method status="PASS" signature="test_dp_01(java.lang.String, java.lang.Integer)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_01" duration-ms="4" started-at="2020-05-23T04:41:48Z" data-provider="friendName" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[41]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- c -->
-        <test-method status="PASS" signature="test_AfterMethod()[pri:0, instance:automation.hrm.TestNGDemo@61832929]" name="test_AfterMethod" is-config="true" duration-ms="1" started-at="2020-05-22T04:33:44Z" finished-at="2020-05-22T04:33:44Z">
+        </test-method> <!-- test_dp_01 -->
+        <test-method status="PASS" signature="test_dp_01(java.lang.String, java.lang.Integer)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_01" duration-ms="3" started-at="2020-05-23T04:41:48Z" data-provider="friendName" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[42]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_AfterMethod -->
-        <test-method status="SKIP" signature="b()[pri:1, instance:automation.hrm.TestNGDemo@61832929]" name="b" duration-ms="0" started-at="2020-05-22T04:33:44Z" depends-on-methods="automation.hrm.TestNGDemo.a, automation.hrm.TestNGDemo.c" finished-at="2020-05-22T04:33:44Z">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method TestNGDemo.b()[pri:1, instance:automation.hrm.TestNGDemo@61832929] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method TestNGDemo.b()[pri:1, instance:automation.hrm.TestNGDemo@61832929] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        </test-method> <!-- test_dp_01 -->
+        <test-method status="PASS" signature="test_dp_01(java.lang.String, java.lang.Integer)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_01" duration-ms="4" started-at="2020-05-23T04:41:48Z" data-provider="friendName" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_8]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[43]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- b -->
-        <test-method status="PASS" signature="test_AfterClass()[pri:0, instance:automation.hrm.TestNGDemo@61832929]" name="test_AfterClass" is-config="true" duration-ms="3" started-at="2020-05-22T04:33:44Z" finished-at="2020-05-22T04:33:44Z">
+        </test-method> <!-- test_dp_01 -->
+        <test-method status="PASS" signature="test_dp_01(java.lang.String, java.lang.Integer)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_01" duration-ms="3" started-at="2020-05-23T04:41:48Z" data-provider="friendName" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_9]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[44]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_AfterClass -->
-        <test-method status="PASS" signature="test_AfterTest()[pri:0, instance:automation.hrm.TestNGDemo@61832929]" name="test_AfterTest" is-config="true" duration-ms="0" started-at="2020-05-22T04:33:44Z" finished-at="2020-05-22T04:33:44Z">
+        </test-method> <!-- test_dp_01 -->
+        <test-method status="PASS" signature="test_dp_01(java.lang.String, java.lang.Integer)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_01" duration-ms="6" started-at="2020-05-23T04:41:48Z" data-provider="friendName" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_10]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[45]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_AfterTest -->
-      </class> <!-- automation.hrm.TestNGDemo -->
+        </test-method> <!-- test_dp_01 -->
+        <test-method status="PASS" signature="test_dp_01(java.lang.String, java.lang.Integer)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_01" duration-ms="2" started-at="2020-05-23T04:41:48Z" data-provider="friendName" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_11]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[46]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_dp_01 -->
+        <test-method status="PASS" signature="test_dp_01(java.lang.String, java.lang.Integer)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_01" duration-ms="1" started-at="2020-05-23T04:41:48Z" data-provider="friendName" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_12]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[47]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_dp_01 -->
+        <test-method status="PASS" signature="test_dp_01(java.lang.String, java.lang.Integer)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_01" duration-ms="2" started-at="2020-05-23T04:41:48Z" data-provider="friendName" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_13]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[48]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_dp_01 -->
+        <test-method status="PASS" signature="test_dp_01(java.lang.String, java.lang.Integer)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_01" duration-ms="2" started-at="2020-05-23T04:41:48Z" data-provider="friendName" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_14]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[49]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_dp_01 -->
+        <test-method status="PASS" signature="test_dp_02(java.lang.String)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_02" duration-ms="1" started-at="2020-05-23T04:41:48Z" data-provider="friendNameAndAge" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_dp_02 -->
+        <test-method status="PASS" signature="test_dp_02(java.lang.String)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_02" duration-ms="3" started-at="2020-05-23T04:41:48Z" data-provider="friendNameAndAge" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_dp_02 -->
+        <test-method status="PASS" signature="test_dp_02(java.lang.String)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_02" duration-ms="4" started-at="2020-05-23T04:41:48Z" data-provider="friendNameAndAge" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_dp_02 -->
+        <test-method status="PASS" signature="test_dp_02(java.lang.String)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_02" duration-ms="3" started-at="2020-05-23T04:41:48Z" data-provider="friendNameAndAge" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_dp_02 -->
+        <test-method status="PASS" signature="test_dp_02(java.lang.String)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_02" duration-ms="2" started-at="2020-05-23T04:41:48Z" data-provider="friendNameAndAge" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_dp_02 -->
+        <test-method status="PASS" signature="test_dp_02(java.lang.String)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_02" duration-ms="1" started-at="2020-05-23T04:41:48Z" data-provider="friendNameAndAge" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_dp_02 -->
+        <test-method status="PASS" signature="test_dp_02(java.lang.String)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_02" duration-ms="2" started-at="2020-05-23T04:41:48Z" data-provider="friendNameAndAge" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_dp_02 -->
+        <test-method status="PASS" signature="test_dp_02(java.lang.String)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_02" duration-ms="6" started-at="2020-05-23T04:41:48Z" data-provider="friendNameAndAge" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_dp_02 -->
+        <test-method status="PASS" signature="test_dp_02(java.lang.String)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_02" duration-ms="2" started-at="2020-05-23T04:41:48Z" data-provider="friendNameAndAge" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_dp_02 -->
+        <test-method status="PASS" signature="test_dp_02(java.lang.String)[pri:0, instance:automation.hrm.DataProviderDemo@8bd1b6a]" name="test_dp_02" duration-ms="2" started-at="2020-05-23T04:41:48Z" data-provider="friendNameAndAge" finished-at="2020-05-23T04:41:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tom_9]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_dp_02 -->
+      </class> <!-- automation.hrm.DataProviderDemo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
