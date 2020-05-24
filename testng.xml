@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Default suite">
-  <test thread-count="5" verbose="2" name="Default test">
-    <classes>
-      <class name="automation.hrm.TestNGDemo"/>
-      <class name="automation.hrm.TestNGDemo1"/>
-      
-    </classes>
-  </test> <!-- Default test -->
+<suite guice-stage="DEVELOPMENT" name="Automation Labs - Selenium">
+	<parameter name="name" value="Tom" />
+	<parameter name="age" value="35" />
+	<test thread-count="5" verbose="2" name="Test_1_Firefox">
+		<parameter name="browserName" value="firefox" />
+		<parameter name="appUrl" value="http://automationlabs.in/" />
+		<classes>
+			<!-- <class name="automation.hrm.TestNGDemo" /> <class name="automation.hrm.TestNGDemo1" 
+				/> <class name="automation.hrm.ParametersDemo" /> <class name="automation.hrm.ParametersDemo1" 
+				/> -->
+			<class name="automation.hrm.LaunchBrowser" />
+		</classes>
+	</test> <!-- Default test -->
+	<test thread-count="5" verbose="2" name="Test_2_Chrome">
+		<parameter name="browserName" value="chrome" />
+		<parameter name="appUrl"
+			value="http://selenium.automationlabs.in/" />
+		<classes>
+			<class name="automation.hrm.LaunchBrowser" />
+		</classes>
+	</test>
 </suite> <!-- Default suite -->

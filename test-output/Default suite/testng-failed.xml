@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+  <parameter name="name" value="Tom"/>
+  <parameter name="age" value="35"/>
+  <test thread-count="5" name="Test_1_Firefox(failed)">
+    <parameter name="browserName" value="firefox"/>
+    <parameter name="appUrl" value="http://automationlabs.in/"/>
     <classes>
-      <class name="automation.hrm.DataProviderDemo">
+      <class name="automation.hrm.LaunchBrowser">
         <methods>
-          <include name="test_dp_01"/>
+          <include name="Test_Title" invocation-numbers="0"/>
         </methods>
-      </class> <!-- automation.hrm.DataProviderDemo -->
+      </class> <!-- automation.hrm.LaunchBrowser -->
     </classes>
-  </test> <!-- Default test(failed) -->
+  </test> <!-- Test_1_Firefox(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
