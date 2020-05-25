@@ -1,5 +1,7 @@
 package automation.hrm;
 
+import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,15 +19,26 @@ public class TestCase_01 extends Base {
 	static String emp_l_name = "Mike";
 	static String emp_id_new;
 
-	
+	static Properties Test_Data;
+
+	public static void loadTestData() {
+//		String s = System.getProperty("user.dir") + "\\TestData\\data.properties";
+		Test_Data = readPropFile(System.getProperty("user.dir") + "\\TestData\\data.properties");
+	}
+
 	public static void loadApp() {
-		d = getBrowser("chrome");
-		d.get("http://hrm.automationlabs.in/business/symfony/web/index.php/auth/login");
+		/*
+		 * d = getBrowser("chrome"); d.get(
+		 * "http://hrm.automationlabs.in/business/symfony/web/index.php/auth/login");
+		 */
+		
+		d = getBrowser(Test_Data.getProperty("browserName"));
+		d.get(Test_Data.getProperty("url"));
 	}
 
 	public static void login() {
-		d.findElement(By.id("txtUsername")).sendKeys("");// need to adduser name
-		d.findElement(By.id("txtPassword")).sendKeys("");
+		d.findElement(By.id("txtUsername")).sendKeys(Test_Data.getProperty("username"));// need to adduser name
+		d.findElement(By.id("txtPassword")).sendKeys(Test_Data.getProperty("password"));
 		d.findElement(By.id("btnLogin")).click();
 		WebDriverWait wait = new WebDriverWait(d, 100);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='welcome']")));
@@ -65,7 +78,8 @@ public class TestCase_01 extends Base {
 	public static void validateDataOfEmployee() {
 		WebDriverWait wait = new WebDriverWait(d, 60);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[text()='Personal Details']"))); // Locater
-		//wait.until(ExpectedConditions.visibilityOf(d.findElement(By.xpath("//h1[text()='Personal Details']")))); // WebElement 
+		// wait.until(ExpectedConditions.visibilityOf(d.findElement(By.xpath("//h1[text()='Personal
+		// Details']")))); // WebElement
 		String f_name = d.findElement(By.xpath("//input[@name='personal[txtEmpFirstName]']")).getAttribute("value");
 		String m_name = d.findElement(By.xpath("//input[@name='personal[txtEmpMiddleName]']")).getAttribute("value");
 		String l_name = d.findElement(By.xpath("//input[@name='personal[txtEmpLastName]']")).getAttribute("value");
@@ -74,7 +88,7 @@ public class TestCase_01 extends Base {
 		if (emp_f_name.equalsIgnoreCase(f_name)) {
 			System.out.println("PASS");
 		}
-		
+
 		if (emp_m_name.equalsIgnoreCase(m_name)) {
 			System.out.println("PASS");
 		}
@@ -90,6 +104,7 @@ public class TestCase_01 extends Base {
 	}
 
 	public static void main(String[] args) {
+		loadTestData();
 		loadApp();
 		login();
 		navigateToAddEmp();

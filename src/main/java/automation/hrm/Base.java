@@ -1,5 +1,8 @@
 package automation.hrm;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -31,12 +34,23 @@ public class Base {
 			d = new FirefoxDriver();
 			d.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			d.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-			
-			
+
 			d.manage().window().maximize();
 		}
 
 		return d;
+	}
+
+	public static Properties readPropFile(String propFileName) {
+		Properties prop = new Properties();
+		try {
+			FileInputStream fis = new FileInputStream(propFileName);
+			prop.load(fis);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return prop;
 	}
 
 }
