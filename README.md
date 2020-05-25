@@ -1,7 +1,7 @@
-# Automated testing of OrangeHRM Application with Selenium
-Examples of Automaton testing of web appliation with Selenium WebDriver API.
+# Automated testing of Web Application with Selenium
+Automaton testing examples with Selenium WebDriver API for web application.
 ## Getting Started
-We are using Maven for project management and 
+We are using Maven for project management and Eclipse IDE.
 ### Project setup
 ### Prerequisites
 - java 1.8
