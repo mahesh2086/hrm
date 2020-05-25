@@ -1,7 +1,8 @@
-# hrm
+# Automated testing of OrangeHRM Application with Selenium
 hrm web application automaton testing with Selenium WebDriver
 
-#setup
-1. java 1.8
-2. chrome version 81.0
+##Project setup
+### Prerequisites
+- java 1.8
+- Chrome Browser Version 81.0
 
