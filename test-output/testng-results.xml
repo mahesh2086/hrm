@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="69" started-at="2020-05-25T03:48:19Z" finished-at="2020-05-25T03:48:19Z">
+  <suite name="Default suite" duration-ms="77" started-at="2020-05-25T12:09:57Z" finished-at="2020-05-25T12:09:57Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="69" started-at="2020-05-25T03:48:19Z" finished-at="2020-05-25T03:48:19Z">
+    <test name="Default test" duration-ms="77" started-at="2020-05-25T12:09:57Z" finished-at="2020-05-25T12:09:57Z">
       <class name="automation.hrm.TestNGDemo1">
-        <test-method status="FAIL" signature="test_01()[pri:0, instance:automation.hrm.TestNGDemo1@2a2d45ba]" name="test_01" duration-ms="23" started-at="2020-05-25T03:48:19Z" finished-at="2020-05-25T03:48:19Z">
+        <test-method status="FAIL" signature="test_01()[pri:0, instance:automation.hrm.TestNGDemo1@2a2d45ba]" name="test_01" duration-ms="20" started-at="2020-05-25T12:09:57Z" finished-at="2020-05-25T12:09:57Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
