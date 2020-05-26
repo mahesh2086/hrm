@@ -1,6 +1,8 @@
 package automation.hrm;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -8,6 +10,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.opencsv.CSVReader;
 
 public class Base {
 
@@ -51,6 +55,19 @@ public class Base {
 		}
 
 		return prop;
+	}
+
+	public static CSVReader readCSVFile(String csvFileName) {
+		CSVReader reader = null;
+		FileReader fr;
+		try {
+			fr = new FileReader(csvFileName);
+			reader = new CSVReader(fr);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		return reader;
+
 	}
 
 }
